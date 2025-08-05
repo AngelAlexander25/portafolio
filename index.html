@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Alexander Barrientos - Ingeniero de Datos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="logo">AAB</div>
+            
+            <!-- Desktop Menu -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" data-section="home">Inicio</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">Sobre mí</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contacto</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu" class="menu-icon"></i>
+                <i data-lucide="x" class="close-icon hidden"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link" data-section="home">Inicio</a>
+            <a href="#about" class="mobile-nav-link" data-section="about">Sobre mí</a>
+            <a href="#projects" class="mobile-nav-link" data-section="projects">Proyectos</a>
+            <a href="#skills" class="mobile-nav-link" data-section="skills">Habilidades</a>
+            <a href="#contact" class="mobile-nav-link" data-section="contact">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-subtitle animate-fade-in">Portfolio 2025</p>
+                <h1 class="hero-title">
+                    <span id="typedText"></span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="hero-description">
+                    Ingeniero en Datos especializado en construir arquitecturas robustas de datos, 
+                    automatizar procesos ETL y crear soluciones analíticas que transforman 
+                    información en decisiones estratégicas.
+                </p>
+                <button class="hero-cta" onclick="scrollToSection('projects')">
+                    Ver Proyectos
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number-line">
+                    <span class="section-number">01</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">Sobre Mí</h2>
+                <p class="section-description">
+                    Transformando datos complejos en insights accionables
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text-section">
+                    <p class="about-text">
+                        Como Ingeniero de Datos, me especializo en diseñar y mantener pipelines de datos escalables,
+                        implementar soluciones de big data y crear dashboards interactivos que facilitan la toma de
+                        decisiones estratégicas en organizaciones de diferentes sectores.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="mailto:alexandermq254@gmail.com" class="social-link">
+                            <i data-lucide="mail"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/alexander-barrientos-355b3924a" class="social-link" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/AngelAlexander25" class="social-link" target="_blank">
+                            <i data-lucide="github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i data-lucide="globe"></i>
+                            <span>Portfolio</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="avatar-container">
+                        <div class="avatar">
+                            <!-- Agrega tu foto aquí -->
+                            <img src="yo.jpg" alt="Foto de perfil de Alexander Barrientos" class="avatar-img">
+                        </div>
+                        <p class="avatar-title"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number-line">
+                    <span class="section-number">02</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-description">
+                    Una selección de mis trabajos más significativos
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-number">01</div>
+                        <div class="project-info">
+                            <h3 class="project-title">E-COMMERCE PLATFORM</h3>
+                            <p class="project-description">
+                                EvoSneakers: plataforma completa de e-commerce para la venta de calzado deportivo con
+                                carrito de compras, gestión de inventario, sistema de usuarios y catálogo dinámico.
+                                Incluye panel administrativo para la gestión de productos y análisis de ventas.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">SQL</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://evosneakers.netlify.app/tienda" class="project-link primary" target="_blank">
+                                Ver Demo
+                                <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="https://github.com/AngelAlexander25/ing-soft" class="project-link secondary" target="_blank">
+                                Ver Código
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-number">02</div>
+                        <div class="project-info">
+                            <h3 class="project-title">CERTIFICACIONES AMBIENTALES</h3>
+                            <p class="project-description">
+                                Sistema web para cadena hotelera que automatiza el proceso de certificaciones ambientales,
+                                con dashboards interactivos desarrollados en Streamlit, reportes automáticos de KPIs de
+                                sostenibilidad y sistema de autenticación seguro con HProxy.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Streamlit</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">HProxy</span>
+                                <span class="tech-tag">Pandas</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1Np7rLRD8NwrZY4eae8grXdDuPgPqkc2A/view?usp=sharing" class="project-link primary" target="_blank">
+                                Ver Demo
+                                <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="#" class="project-link secondary">
+                                Case Study
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-number">03</div>
+                        <div class="project-info">
+                            <h3 class="project-title">ETL PIPELINE</h3>
+                            <p class="project-description">
+                                NBA Analytics Dashboard es una página web interactiva que muestra estadísticas y rankings de jugadores de la NBA a través de gráficos y tablas dinámicas. Los datos se procesan y analizan con Python, se exportan en formato JSON y la web se actualiza automáticamente leyendo estos archivos para mostrar la información más reciente.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">SQLite</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://angelalexander25.github.io/nba-etl-pipeline/" class="project-link primary" target="_blank">
+                                Ver Demo
+                                <i data-lucide="external-link"></i>
+                            </a>
+                            <a href="https://github.com/AngelAlexander25/nba-etl-pipeline.git" class="project-link secondary" target="_blank">
+                                Ver Código
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number-line">
+                    <span class="section-number">03</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">Habilidades Técnicas</h2>
+                <p class="section-description">
+                    Tecnologías y herramientas que domino
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Programming Skills -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programación</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percentage">40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-percentage">40%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="40"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend & Web Skills -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend & Web</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Streamlit</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Engineering Skills -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Data Engineering</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Pandas/NumPy</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">ETL Processes</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Data Pipelines</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Data Visualization</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Skills -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Bases de Datos</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Database Design</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Query Optimization</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Data Modeling</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-number-line">
+                    <span class="section-number">04</span>
+                    <div class="section-line"></div>
+                </div>
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-description">
+                    ¿Tienes un proyecto en mente? ¡Hablemos!
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Nombre</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Mensaje</label>
+                        <textarea class="form-textarea" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Angel Alexander Barrientos Hidalgo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
